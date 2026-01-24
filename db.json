@@ -1,0 +1,24 @@
+{
+  "reseps": [
+    {
+      "id": "449a",
+      "foto": "https://picsum.photos/400/300",
+      "nama_produk": "Produk Dummy Pala Dewi",
+      "deskripsi": "Ini cuma simulasi",
+      "harga": 20000,
+      "kategori": "Snack",
+      "link_jual": "https://shopee.co.id/",
+      "platform": "shopee"
+    },
+    {
+      "id": "f897",
+      "foto": "https://pin.it/3OxZNd460",
+      "nama_produk": "kucing lucu",
+      "deskripsi": "Ini kucing aku yang punya, aku suka kucingnya.love banget",
+      "harga": 2500,
+      "kategori": "hewan",
+      "link_jual": "https://shopee.co.id/",
+      "platform": "shopee"
+    }
+  ]
+}
