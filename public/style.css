@@ -2426,3 +2426,305 @@ body{
 .about-full-link small {
   color: rgba(255,255,255,.85) !important;
 }
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+@media (max-width: 768px){
+
+  body{
+    overflow-x: hidden;
+  }
+
+  .container{
+    width: calc(100% - 32px);
+  }
+
+  /* HEADER */
+  .nav-left{
+    display: none;
+  }
+
+  /* HERO */
+  .hero-full{
+    padding: 56px 0 72px;
+  }
+
+  .hero-grid{
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .hero-title{
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .hero-actions{
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-visual{
+    order: -1;
+  }
+
+  .hero-visual img{
+    max-width: 280px;
+  }
+
+  /* TOPBAR */
+  .produk-topbar-inner{
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .produk-topbar-item{
+    font-size: 11px;
+    letter-spacing: .06em;
+  }
+
+  /* PRODUCT SLIDER */
+  .product-slide{
+    flex-basis: 260px;
+  }
+
+  /* ABOUT */
+  .about-footer-inner{
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: left;
+  }
+
+  .about-brand img{
+    max-width: 200px;
+    margin-bottom: 16px;
+  }
+}
+/* =========================
+   MOBILE REFINEMENT
+   ========================= */
+   @media (max-width: 768px) {
+
+    /* ---------- GLOBAL ---------- */
+    body {
+      overflow-x: hidden;
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  
+    /* ---------- HEADER ---------- */
+    .nav-left {
+      display: none;
+    }
+  
+    .menu-btn {
+      display: inline-flex;
+    }
+  
+    .brand-center {
+      font-size: 16px;
+    }
+  
+    /* ---------- MOBILE NAV ---------- */
+    .mobile-nav {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: #fff7ed;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+  
+    .mobile-nav a {
+      font-size: 15px;
+      font-weight: 600;
+    }
+  
+    .mobile-nav[hidden] {
+      display: none;
+    }
+  
+    /* ---------- HERO ---------- */
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      text-align: center;
+    }
+  
+    .hero-title {
+      font-size: 22px;
+      line-height: 1.35;
+    }
+  
+    .hero-actions {
+      justify-content: center;
+    }
+  
+    .hero-visual img {
+      max-width: 280px;
+      margin: 0 auto;
+      display: block;
+    }
+  
+    /* ---------- TOPBAR ---------- */
+    .produk-topbar-inner {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      font-size: 12px;
+      text-align: center;
+    }
+  
+    /* ---------- SECTION ---------- */
+    .section {
+      padding: 48px 0;
+    }
+  
+    .h2 {
+      font-size: 22px;
+    }
+  
+    /* ---------- PRODUCT SLIDER ---------- */
+    .product-slider {
+      overflow-x: auto;
+    }
+  
+    .product-slide {
+      min-width: 260px;
+    }
+  
+    /* ---------- FAQ ---------- */
+    .faq summary {
+      font-size: 14px;
+    }
+  
+    .faq p {
+      font-size: 13px;
+    }
+  
+    /* ---------- FOOTER / ABOUT ---------- */
+    .about-footer-inner {
+      flex-direction: column;
+      gap: 24px;
+      text-align: center;
+    }
+  
+    .about-col img {
+      max-width: 160px;
+      margin: 0 auto;
+    }
+  
+  }
+  .olx-section {
+    padding: 32px 16px;
+  }
+  
+  .olx-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  
+  /* Card */
+  .olx-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 12px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .olx-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  }
+  
+  .olx-card img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .olx-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b3f2d;
+    margin-bottom: 6px;
+  }
+  
+  .olx-card p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+  }
+  @media (max-width: 768px) {
+    .olx-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-full {
+    padding: 48px 0;
+  }
+  
+  .hero-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero-visual {
+    flex-shrink: 0;
+  }
+  
+  .hero-visual img {
+    width: 100%;
+    max-width: 100px;   /* sebelumnya 260 → dikecilin */
+    height: auto;  
+  }
+  .hero-text {
+    flex: 1;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 768px) {
+    .hero-grid {
+      gap: 16px;
+    }
+  
+    .hero-visual img {
+      max-width: 40px; /* kecil & sopan */
+    }
+  
+    .hero-title {
+      font-size: 20px;
+    }
+  }
+  .hero-full {
+    border-bottom: 1px solid #eee;
+  }
+          
+   
