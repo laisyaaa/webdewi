@@ -168,4 +168,19 @@ document.addEventListener("DOMContentLoaded", function () {
      INIT
   =============================== */
   loadProduk();
+
+   /* ===============================
+     HAMBURGER MENU (MOBILE)
+  =============================== */
+
+  const hamburger = document.querySelector(".hamburger");
+  const mobileMenu = document.querySelector(".topbar-mobile");
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      mobileMenu.classList.toggle("show");
+    });
+  }
+  
 });
