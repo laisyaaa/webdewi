@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Lapak UMKM Desa Cibolang — Olahan Pala (PalaDewi)</title>
   <meta name="description" content="Lapak UMKM Desa Cibolang menjual olahan pala: sirup, manisan, selai, dan teh rempah. Kenali PalaDewi & TanyaDewi AI untuk dukung UMKM desa." />
@@ -56,42 +56,43 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Lewati ke konten utama</a>
-
-  <!-- DECOR (opsional). Kalau tidak ada file, aman -->
-  <img class="floaty decor decor-top-left" src="decor/pala-1.png" alt="" loading="lazy" />
-  <img class="floaty r decor decor-top-right" src="decor/pala-2.png" alt="" loading="lazy" />
-
-  <header class="site-header">
-    <div class="container header-inner">
+  <header class="topbar">
+    <div class="topbar-container">
+  
+      <!-- LOGO -->
+      <a href="/" class="topbar-logo">
+        <img src="/img/paladewinobg.png" alt="PalaDewi" />
+        <span>PalaDewi</span>
+      </a>
   
       <!-- NAV DESKTOP -->
-      <nav class="nav nav-left">
-        <a class="nav-link" href="#produk">Produk</a>
-        <a class="nav-link" href="#paladewi">PalaDewi</a>
-        <a class="nav-link" href="#faq">FAQ</a>
-        <a class="nav-link" href="#kontak">Kontak</a>
+      <nav class="topbar-nav">
+        <a href="#home">Home</a>
+        <a href="#produk">Produk</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About</a>
       </nav>
   
-      <!-- <a class="brand brand-center" href="#">PalaDewi</a> -->
+      <!-- CTA
+      <a href="#" class="topbar-btn">Download</a> -->
   
-      <!-- <div class="nav-right">
-        <a class="cta-btn" href="#produk">Start for free</a>
-        <button class="menu-btn" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button> -->
-      </div>
+      <!-- HAMBURGER -->
+      <button class="topbar-toggle" aria-label="Menu">
+        ☰
+      </button>
   
+    </div>
+  
+    <!-- MOBILE MENU -->
+    <div class="topbar-mobile">
+      <a href="#home">Home</a>
+      <a href="#produk">Produk</a>
+      <a href="#faq">FAQ</a>
+      <a href="#about">About</a>
+      <a class="mobile-btn" href="#">Download App</a>
     </div>
   </header>
   
-  <!-- 🔥 INI YANG KAMU TANYA -->
-  <nav class="mobile-nav" hidden>
-    <a href="#produk">Produk</a>
-    <a href="#paladewi">PalaDewi</a>
-    <a href="#faq">FAQ</a>
-    <a href="#kontak">Kontak</a>
-  </nav>
   
 
      <!-- HERO -->
@@ -177,7 +178,7 @@
 </section> -->
 
 
-      <!-- PALADEWI (Quote Style) -->
+      <!-- PALADEWI (Quote Style)
 <section id="paladewi" class="section paladewi-quote" aria-label="PalaDewi Quote">
   <div class="container center">
 
@@ -188,7 +189,7 @@
     </blockquote>
 
   </div>
-</section>
+</section> -->
 
 
       <!-- PRODUK (Template only, isi via JS dari API) -->
