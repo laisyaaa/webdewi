@@ -4,7 +4,7 @@
 =================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
-  const API_URL = "http://127.0.0.1:8000/api/toko"; // GANTI DOMAIN JIKA PERLU
+  const API_URL = "http://103.176.78.29/api/toko"; // GANTI DOMAIN JIKA PERLU
 
   const track = document.getElementById("productTrack");
   const template = document.getElementById("productCardTemplate");
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const foto = item.gambar_produk
       ? (item.gambar_produk.startsWith("http")
           ? item.gambar_produk
-          : `http://127.0.0.1:8000/storage/${item.gambar_produk}`)
+          : `http://103.176.78.29/storage/${item.gambar_produk}`)
       : "fallback.jpg"; // optional
 
     const linkJual = item.link_ecommerce || "#";
