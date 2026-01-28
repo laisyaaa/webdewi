@@ -6,7 +6,7 @@ import './style.css'
 =================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
-  const API_URL = "/api/toko";
+  const API_URL = "http://103.176.78.29/api/toko";
 
   const track = document.getElementById("productTrack");
   const template = document.getElementById("productCardTemplate");
