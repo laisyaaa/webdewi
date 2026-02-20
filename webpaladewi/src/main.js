@@ -19,45 +19,47 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ===============================
      LOAD DATA PRODUK (AJAX GET)
   =============================== */
- function loadProduk() {
-  fetch(API_URL, {
-    method: "GET",
-    headers: { "Accept": "application/json" }
-  })
-    .then(async (res) => {
-      // kalau server balikin error, kita lempar error biar masuk catch
-      if (!res.ok) {
-        const text = await res.text();
-        throw new Error(`HTTP ${res.status} - ${text}`);
-      }
-      return res.json();
+  function loadProduk() {
+    fetch(API_URL, {
+      method: "GET",
+      headers: { "Accept": "application/json" },
+      // kalau Laravel supports credentials, bisa ditambah:
+      // credentials: "include"
     })
-    .then(result => {
-      console.log("RAW RESULT:", result);
-
-      // ambil array data dari berbagai kemungkinan response
-      let data = Array.isArray(result) ? result : (result.data || []);
-
-      // kalau ternyata data itu object (bukan array), bungkus jadi array
-      if (!Array.isArray(data) && data && typeof data === "object") {
-        data = [data];
-      }
-
-      console.log("PARSED DATA:", data);
-
-      if (!data.length) {
-        showEmpty();
-        return;
-      }
-
-      renderProduk(data);
-      initSlider();
-    })
-    .catch(error => {
-      console.error("Gagal load produk:", error);
-      showError();
-    });
-}
+      .then(async (res) => {
+        if (!res.ok) {
+          const text = await res.text();
+          throw new Error(`HTTP ${res.status} - ${text}`);
+        }
+        return res.json();
+      })
+      .then(result => {
+        console.log("RAW RESULT:", result);
+  
+        // Ambil array data dari berbagai kemungkinan response
+        let data = Array.isArray(result) ? result : (result.data || []);
+  
+        // Kalau ternyata data itu object (bukan array), bungkus jadi array
+        if (!Array.isArray(data) && data && typeof data === "object") {
+          data = [data];
+        }
+  
+        console.log("PARSED DATA:", data);
+  
+        if (!data.length) {
+          showEmpty(); // fallback kalau kosong
+          return;
+        }
+  
+        renderProduk(data); // fungsi buat masukin data ke HTML
+        initSlider();       // init slider kalau ada
+      })
+      .catch(error => {
+        console.error("Gagal load produk:", error);
+        showError(); // tampilkan pesan error di UI
+      });
+  }
+  
 
 
   /* ===============================
