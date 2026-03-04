@@ -208,11 +208,9 @@ a:hover{ opacity:.92; }
   width:100%;
   margin:0;
   border-radius:0;
-
   background-image: url('https://www.asterra.id/wp-content/uploads/2024/02/buah-pala-scaled.jpg');
   background-size: cover;
   background-position: center;
-
   display:grid;
   place-items:center;
 }
@@ -3347,4 +3345,55 @@ body{
     width: 160px;   /* 🔥 gambar sekarang GEDE */
   }
 }
+ /* ===== HERO BACKGROUND BGDEWI ===== */
+.hero-full {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
 
+.hero-full::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: -20px !important;
+  background-image: url('../img/bgdewi.png') !important;
+  /* COBA JUGA: url('./img/bgdewi.png') atau url('img/bgdewi.png') */
+  background-size: cover !important;
+  background-position: center !important;
+  filter: blur(10px) !important;
+  opacity: 0.30 !important;
+  z-index: -1 !important;
+}
+/* ===== FIX: HERO BG DESKTOP ===== */
+.hero-full::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: -20px !important;
+  background-image: url('/img/bgdewi.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  filter: blur(10px) !important;
+  opacity: 0.30 !important;
+  z-index: -1 !important;
+}
+
+.hero-full::after {
+  content: none !important;
+}
+/* ===== HERO BG REFINEMENT ===== */
+.hero-full::before {
+  filter: blur(2px) !important;   /* kurangi blur */
+  opacity: 0.18 !important;       /* lebih tipis biar nyatu */
+  inset: 0 !important;            /* hapus -20px biar pas */
+}
+
+/* biar nyatu sama header (warna cream di atas) */
+.hero-full {
+  background: linear-gradient(
+    180deg,
+    #FFF7ED 0%,        /* cream = warna header */
+    transparent 18%    /* fade ke transparan */
+  ) !important;
+}
